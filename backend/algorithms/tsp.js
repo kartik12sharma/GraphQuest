@@ -88,3 +88,17 @@ export function validateTSP(userAnswer, correctSolution, edges, startNode, nodes
 
   return tourWeight(userAnswer) === tourWeight(correctSolution);
 }
+
+export function generateCompleteEdges(nodes, minWeight, maxWeight) {
+  const edges = [];
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
+      edges.push({
+        from: nodes[i],
+        to: nodes[j],
+        weight: Math.floor(Math.random() * (maxWeight - minWeight + 1)) + minWeight,
+      });
+    }
+  }
+  return edges;
+}
