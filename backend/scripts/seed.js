@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import { connectDB, getDB } from '../db/temp.js';
+import { connectDB, getDB } from '../db/connection.js';
 import { isConnected, generateCompleteEdges } from '../algorithms/tsp.js';
 
 dotenv.config({ path: '../../.env' });
