@@ -2,12 +2,12 @@ import dotenv from 'dotenv';
 import { connectDB, getDB } from '../db/connection.js';
 import { isConnected, generateCompleteEdges } from '../algorithms/tsp.js';
 
-dotenv.config({ path: '../../.env' });
+dotenv.config();
 
 const DIFFICULTY_CONFIG = {
-  easy: { minNodes: 4, maxNodes: 5, minWeight: 1, maxWeight: 10 },
-  medium: { minNodes: 6, maxNodes: 8, minWeight: 1, maxWeight: 15 },
-  hard: { minNodes: 9, maxNodes: 12, minWeight: 1, maxWeight: 15 },
+  easy: { minNodes: 5, maxNodes: 5, minWeight: 1, maxWeight: 10 },
+  medium: { minNodes: 7, maxNodes: 7, minWeight: 1, maxWeight: 15 },
+  hard: { minNodes: 9, maxNodes: 9, minWeight: 1, maxWeight: 15 },
 };
 
 const BATCH_CONFIG = [

@@ -2,7 +2,7 @@ import express from 'express';
 import session from 'express-session';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { connectDB } from '/backend/db/connection.js';
+import { connectDB } from './backend/db/connection.js';
 import mstRoutes from './backend/routes/mst.js';
 import tspRoutes from './backend/routes/tsp.js';
 import userRoutes from './backend/routes/users.js';
